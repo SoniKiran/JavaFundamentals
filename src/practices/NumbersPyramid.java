@@ -1,3 +1,4 @@
+package practices;
 
 /*
 Write Program using for, while for following patterns

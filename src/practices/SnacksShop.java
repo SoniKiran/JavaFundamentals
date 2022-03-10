@@ -1,3 +1,4 @@
+package practices;
 class SnacksShop
 {
 	public static void main(String [] args)

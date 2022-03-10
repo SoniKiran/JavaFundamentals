@@ -1,3 +1,4 @@
+package practices;
 /*
 Write a java function that accepts electricity units as parameter and calculate and return total electricity bill according to the given condition:
 For first 50 units Rs. 6.0/unit
