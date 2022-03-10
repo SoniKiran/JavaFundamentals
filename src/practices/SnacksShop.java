@@ -1,4 +1,6 @@
 package practices;
+
+//Program for conditional understanding
 class SnacksShop
 {
 	public static void main(String [] args)
