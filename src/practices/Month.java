@@ -4,7 +4,7 @@ public class Month{
 	{
 		System.out.println(numOfDaysEfficiently(5));
 	}
-
+//Example of bad logic
 static int numOfDays(int monthNo)
 {
 if(monthNo==1)
