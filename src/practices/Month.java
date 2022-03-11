@@ -7,6 +7,7 @@ public class Month{
 //Example of bad logic
 static int numOfDays(int monthNo)
 {
+//NOTE: These following lines has lots of code repeatation while returning value. One should avoid this. 
 if(monthNo==1)
 return 31;
 else if(monthNo==2)
@@ -36,6 +37,7 @@ else return 0;
 
 static int numOfDaysEfficiently(int monthNo)
 {
+	//NOTE: This method has solved code repeatation problem with switching the month number and use one switch statement for common return value.
 	int numOfDays;
 	switch(monthNo)
 	{
