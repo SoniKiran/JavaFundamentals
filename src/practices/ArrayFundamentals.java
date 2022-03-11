@@ -4,7 +4,7 @@ public class ArrayFundamentals {
 		public static void main(String[] args)
 		{
 			//float[] raceCompletion = new float[16];
-			float[] raceCompletion={
+			float[] raceCompletion={ //NOTE: Adding array elements at array defination. We can skip array size here as java will check number of elements we have provided and will declare with that size. 
 				10.5f,
 				5.2f,
 				5.2f,
@@ -23,6 +23,7 @@ public class ArrayFundamentals {
 				5.6f
 			};
 
+			//NOTE: Adding elements in array after r array defination.
 			//raceCompletion[0]=10.5f;
 			//raceCompletion[1]=5.2f;
 			//raceCompletion[2]=5.2f;
@@ -44,14 +45,12 @@ public class ArrayFundamentals {
 
 			
 		}
-		static void fastestStudent(float[] raceCompletion)
+		static void fastestStudent(float[] raceCompletion) //NOTE: We defined this method as static since we're calling this method from main method which is static.
 		{
 			float fastest=raceCompletion[0];
 			int student=0;
-			for(int i=0; i<raceCompletion.length;i++)
+			for(int i=0; i<raceCompletion.length;i++) //NOTE: Array index starts from zero and ends at array length(size)-1.
 			{
-				//System.out.println("student " +(i+1)+ " completed running in "+raceCompletion[i]+" seconds.");
-				
 				if(fastest>raceCompletion[i])
 				{
 					fastest=raceCompletion[i];
@@ -59,7 +58,7 @@ public class ArrayFundamentals {
 				}
 
 			}
-			System.out.println("Student "+(student+1)+" completed race fastest in "+fastest+" seconds.");
+			System.out.println("Student "+(student+1)+" completed race fastest in "+fastest+" seconds."); //NOTE: Since array index start at zero, we always use index+1 to show its n'th record. 
 		}
 	}
 
