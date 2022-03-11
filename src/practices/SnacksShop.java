@@ -1,6 +1,14 @@
+/*
+Problem Statement:
+Write program for Snacks shop where, If shop has burger, pepsi and cola available serve all and update bill.
+If burger and pepsi available serve burger and pepsi and update bill.
+If burger and cola available serve burger and cola and update bill.
+If only burger available, serve only burger and update bill.
+if burger also not available serve sandwitch and update bill.
+
+*/
 package practices;
 
-//Program for conditional understanding
 class SnacksShop
 {
 	public static void main(String [] args)
@@ -46,7 +54,7 @@ class SnacksShop
 	}
 }
 
-class Snack
+class Snack  //NOTE: This class has default access specifier as package private. This class will be accessible every where accross the package.
 {
 	public boolean IsBurgerPresent;
 	public boolean IsPepsiPresent;
