@@ -7,15 +7,17 @@ For next 100 units Rs. 9.0/unit
 For unit above 250 Rs. 11.50/unit
 An additional surcharge of 20% is added to the bill.
 */
-import java.util.*;
+import java.util.Scanner;
 public class ElectricityBoard
 {
 	public static void main(String[] a)
 	{
-		Scanner sd= new Scanner(System.in);
-		System.out.println("Enter Units: ");
-		int unitsConsumed=sd.nextInt(); //ToDo: Accept input from user 
-		System.out.println("Total electricity bill for "+unitsConsumed+" units is: Rs."+ CalculateElectricityBill(unitsConsumed));		
+		try (Scanner sd = new Scanner(System.in))
+		{
+			System.out.println("Enter Units: ");
+			int unitsConsumed=sd.nextInt(); //ToDo: Accept input from user 
+			System.out.println("Total electricity bill for "+unitsConsumed+" units is: Rs."+ CalculateElectricityBill(unitsConsumed));
+		}		
 	}
 	public static double CalculateElectricityBill(int unitsConsumed)
 	{
