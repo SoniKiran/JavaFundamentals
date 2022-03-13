@@ -15,7 +15,7 @@ class SnacksShop
 	{
 		Snack snack=new Snack(true, true,true);
 		System.out.println("Entered in shop.");
-		if(snack.IsBurgerPresent)
+		if(snack.getIsBurgerPresent())
 		{
 			if(snack.IsPepsiPresent)
 			{
@@ -56,7 +56,7 @@ class SnacksShop
 
 class Snack  //NOTE: This class has default access specifier as package private. This class will be accessible every where accross the package.
 {
-	public boolean IsBurgerPresent;
+	private boolean IsBurgerPresent;
 	public boolean IsPepsiPresent;
 	public boolean IsColaPresent;
 	private int billAmount;
@@ -66,6 +66,14 @@ class Snack  //NOTE: This class has default access specifier as package private.
 		this.IsPepsiPresent=isPepsiPresent;
 		this.billAmount = 0;
 		this.IsColaPresent=isColaPresent;
+	}
+	
+	void setIsBurgerPresent(boolean isPresent) {
+		this.IsBurgerPresent=isPresent;
+	}
+		
+	boolean getIsBurgerPresent() {
+		return IsBurgerPresent;
 	}
 	
 	void eatBurger()
