@@ -2,16 +2,16 @@ package practices;
 
 public class InheritanceBasics {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args)
+	{
+		Parent parent=new Parent("Ompho Dadi");
+		parent.accessible();
 		Child child=new Child("Ompho Dadaji");
 		child.printXyz();
-		child.accessible();
+		child.accessible(); // This is method inherited from parent class Parent
 		//child.printAbc();
 	}
 }
-//Keyword final and super
-
 
 class Parent
 {
@@ -22,7 +22,8 @@ class Parent
 		 this.name=name;
 	 }
 	
-	String getName(){
+	String getName()
+	{
 		return this.name;
 	}
 	void accessible() {
@@ -33,13 +34,23 @@ class Parent
 	}
 }
 
-class Child extends Parent{
-	
+final class anotherParent //Since this class is declared with keyword final, this class cannot be inherited into another class.
+{
+	void accessible()
+	{
+
+	}
+}
+
+class Child extends Parent //Keyword extends in used to inherit parent class into child class
+{
+	//When some class is inherited into child class, child class has its own properties as well properties shared by its parent class.
 	Child(String name)
 	{
-		super(name);
+		super(name); //When parent class present parameterisez constructor it is must for child class to call a parent class constructor with super keyword from its own constructor
 	}
-	void printXyz() {
+	void printXyz()
+	{
 		System.out.println("But You hate me!!");
 	}
 }
